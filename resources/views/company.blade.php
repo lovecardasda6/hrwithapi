@@ -1,4 +1,4 @@
-@include('modules/add_company');
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -281,12 +281,13 @@
             <div class="container-fluid">
 
                 <div class="row">
+
                     <div class="col-12">
 
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Listed Companies</h3>
-                                <button class="btn btn-primary float-right">Add Company</button>
+                                <button class="btn btn-primary float-right" onclick="$('#add_company_module').show()">Add Company</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -872,6 +873,14 @@
     });
 </script>
 
+<script>
+    $(function(){
+
+        $("#add_company_module").hide();
+
+    });
+</script>
+
 <!-- AdminLTE for demo purposes -->
 {{--<script src="dist/js/demo.js"></script>--}}
 {{--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->--}}
@@ -879,3 +888,4 @@
 
 </body>
 </html>
+@include('modules/add_company')
